@@ -3,8 +3,9 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom'; // matchPath： 只能匹配到一层路由，不能匹配到多级路由
 import { matchRoutes, renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
-import { LocaleProvider } from 'antd';
+import { ConfigProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
+// import zhCN from 'antd/es/locale/zh_CN';
 import { createServerStore } from '../store';
 import routes from '../routes';
 
@@ -56,13 +57,13 @@ export default (req, res) => {
     // 发现使用了Redirect, StaticRouter会自动向context注入重定向内容
 
     const content = renderToString(
-      <LocaleProvider locale={zh_CN}>
+      <ConfigProvider locale={zh_CN}>
         <Provider store={store}>
           <StaticRouter location={req.url} context={context}>
             {renderRoutes(routes)}
           </StaticRouter>
         </Provider>
-      </LocaleProvider>,
+      </ConfigProvider>,
     );
 
     let css = '';

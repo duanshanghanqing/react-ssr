@@ -44,9 +44,7 @@ module.exports = merge(webpackbaseconfig, {
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                ENV: '"development"',
-                STAGE_ENV: `"${ process.env.STAGE_ENV }"`,
-                PORT: `"${process.env.PORT}"`
+                ENV: '"development"'
             }
         })
     ]

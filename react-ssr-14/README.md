@@ -1,72 +1,38 @@
-#  安装
+###  安装
 
     npm i
 
-# 开发环境
+### 启动开发环境
 
-    npm run dev
+    1.时时编译
+        npm run dev
+    
+    2.时时重启
+        npm run devstart
 
-    npm run devstart
+### 编译生产环境
 
-##### 检查语法错误
+    1.编译
+        npm run build
+    
+    2.单核启动
+        npm start
 
-    npm run lint
+### pm2 启动
+    
+    1.编译
+        npm run build
 
-##### 修复语法错误
+    2.pm2多核启动
+        npm run start:prod
 
-    npm run lint-fix
+    3.停止
+        npm run stop:prod
 
-##### 访问：http://localhost:9010
-
-# 编译生产环境
-
-##### 编译开发环境，端口 9010
-
-    npm run build:dev
-
-##### 编译测试环境，端口 9011
-
-    npm run build:test
-
-##### 编译仿真环境，端口 9012
-
-    npm run build:sim
-
-##### 编译生产环境，端口 9013
-
-    npm run build:prod
-
-# 启动
-
-##### 单核启动
-
-    npm start
-
-##### PM2启动
-
-    npm run start:dev
-
-    npm run start:test
-
-    npm run start:sim
-
-    npm run start:prod
-
-##### PM2停止
-
-    npm run stop:dev
-
-    npm run stop:test
-
-    npm run stop:sim
-
-    npm run stop:prod   
+### 例子中 secret 值会变，如发现接口异常，请留言，及时提供最新的值
 
 
-# 例子中 secret 值会变，如发现接口异常，请留言，及时提供最新的值
-
-
-# 比较坑的地方
+### 比较坑的地方
 
     整合 ant 样式
 

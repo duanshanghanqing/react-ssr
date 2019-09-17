@@ -6,7 +6,7 @@ export default () => ({
       _Global,
     };
   },
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
 
   },
   componentDidMount() {

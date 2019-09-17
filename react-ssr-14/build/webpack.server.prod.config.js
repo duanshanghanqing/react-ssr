@@ -54,9 +54,7 @@ module.exports = merge(webpackbaseconfig, {
         new OptimizeCssAssetsPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                ENV: '"production"',
-                STAGE_ENV: `"${ process.env.STAGE_ENV }"`,
-                PORT: `"${process.env.PORT}"`
+                ENV: '"production"'
             }
         })
     ]

@@ -6,7 +6,7 @@ class NotFound extends React.Component {
     this.state = {};
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.staticContext) {
       this.props.staticContext.NOT_FOUND = true;
     }
