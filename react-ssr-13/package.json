@@ -12,7 +12,7 @@
     "dev:build:server": "webpack --config ./build/webpack.server.dev.config.js --watch",
     "dev:build:client": "webpack --config ./build/webpack.client.dev.config.js --watch",
     "dev": "npm run rm && npm-run-all --parallel dev:**",
-    "dev:start": "nodemon --watch server --exec node ./server/bundle.js",
+    "start:dev": "nodemon --watch server --exec node ./server/bundle.js",
     "lint": "eslint --ext .js,.jsx src",
     "lint-fix": "eslint --fix --ext .js,.jsx src"
   },
